@@ -1,5 +1,7 @@
 import express from "express";
 import cors from "cors";
+import connectDatabase from "./database";
+import "reflect-metadata";
 
 const app = express();
 app.use(cors());
@@ -10,3 +12,7 @@ app.get("/test", (req, res) => {
 });
 
 export default app;
+
+export async function init () {
+    await connectDatabase();
+  }
