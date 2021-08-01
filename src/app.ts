@@ -2,6 +2,7 @@ import express from "express";
 import cors from "cors";
 import connectDatabase from "./database";
 import "reflect-metadata";
+import "./setup";
 
 const app = express();
 app.use(cors());
