@@ -11,6 +11,9 @@ export default class Exams {
   @Column()
   name: string;
 
+  @Column()
+  url: string;
+
   @ManyToOne(()=> Disciplines, disciplines => disciplines.exams)
   disciplines: Disciplines;
 
